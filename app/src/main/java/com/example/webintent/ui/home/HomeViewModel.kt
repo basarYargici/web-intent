@@ -8,8 +8,14 @@ import androidx.lifecycle.ViewModel
 import com.example.webintent.Constants
 import com.example.webintent.R
 import com.example.webintent.ResProvider
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class HomeViewModel(private val resProvider: ResProvider) : ViewModel() {
+@HiltViewModel
+class HomeViewModel @Inject constructor(
+    private val resProvider: ResProvider
+) : ViewModel() {
+
     fun getBrowserIntent(): Intent {
         val webPage = Uri.parse(Constants.url)
         return Intent(Intent.ACTION_VIEW, webPage)

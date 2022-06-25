@@ -8,7 +8,9 @@ import android.webkit.WebViewClient
 import androidx.fragment.app.Fragment
 import com.example.webintent.Constants
 import com.example.webintent.databinding.FragmentWebBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class WebFragment : Fragment() {
     private lateinit var binding: FragmentWebBinding
 
@@ -16,7 +18,6 @@ class WebFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
         binding = FragmentWebBinding.inflate(layoutInflater)
         return binding.root
     }
