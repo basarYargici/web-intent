@@ -1,4 +1,4 @@
-package com.example.webintent
+package com.example.webintent.ui.web
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebViewClient
 import androidx.fragment.app.Fragment
+import com.example.webintent.Constants
 import com.example.webintent.databinding.FragmentWebBinding
 
 class WebFragment : Fragment() {
