@@ -28,5 +28,4 @@ class WebFragment : Fragment() {
             loadUrl(Constants.url)
         }
     }
-
 }

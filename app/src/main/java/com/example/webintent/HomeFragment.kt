@@ -1,5 +1,6 @@
 package com.example.webintent
 
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -31,6 +32,12 @@ class HomeFragment : Fragment() {
     }
 
     private fun setListeners() {
+        binding.btnBrowser.setOnClickListener {
+            val webPage = Uri.parse(url)
+            val intent = Intent(Intent.ACTION_VIEW, webPage)
+            startActivity(intent)
+        }
+
         binding.btnCustomTab.setOnClickListener {
             val customTabsIntent = customTabIntentBuilder().build()
             customTabsIntent.launchUrl(requireContext(), Uri.parse(url))
