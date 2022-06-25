@@ -16,7 +16,6 @@ class WebFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
         binding = FragmentWebBinding.inflate(layoutInflater)
         return binding.root
     }
