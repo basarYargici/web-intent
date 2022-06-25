@@ -10,6 +10,7 @@ import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.webintent.Constants.url
 import com.example.webintent.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -31,7 +32,6 @@ class HomeFragment : Fragment() {
 
     private fun setListeners() {
         binding.btnCustomTab.setOnClickListener {
-            val url = "https://stackoverflow.com/questions/2808796/what-is-an-android-pendingintent"
             val customTabsIntent = customTabIntentBuilder().build()
             customTabsIntent.launchUrl(requireContext(), Uri.parse(url))
         }
